@@ -1,9 +1,11 @@
 BH1750
 ======
 
+*Adopted for ESP8266*
+
 An Arduino library for digital light sensor breakout boards containing the BH1750FVI IC.
 
-The board uses I2C for communication. 
+The board uses I2C for communication.
 
 2 pins are required to interface to the device.
 
@@ -26,11 +28,11 @@ This example initalises the BH1750 object using the default
 high resolution mode and then makes a light level reading every second.
 
 Connection:
- VCC-5v
- GND-GND
- SCL-SCL(analog pin 5)
- SDA-SDA(analog pin 4)
- ADD-NC or GND
+    VCC-5v
+    GND-GND
+    SCL-SCL (D1 or GPIO5 on NodeMCU 1.0)
+    SDA-SDA (D2 or GPIO4 on NodeMCU 1.0)
+    ADD-NC (Not connected)
 
 */
 

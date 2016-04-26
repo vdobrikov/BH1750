@@ -8,9 +8,9 @@ high resolution mode and then makes a light level reading every second.
 Connection:
  VCC-5v
  GND-GND
- SCL-SCL(analog pin 5)
- SDA-SDA(analog pin 4)
- ADD-NC or GND
+ SCL-SCL (D1 or GPIO5 on NodeMCU 1.0)
+ SDA-SDA (D2 or GPIO4 on NodeMCU 1.0)
+ ADD-NC (Not connected)
 
 */
 

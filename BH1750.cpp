@@ -8,11 +8,12 @@ interface to the device.
 
 
 Written by Christopher Laws, March, 2013.
+Adopted for ESP8266 by Vladimir Dobrikov, Apr, 2016.
+
 
 */
 
 #include "BH1750.h"
-#include <util/delay.h>
 
 
 BH1750::BH1750() {
@@ -37,7 +38,7 @@ void BH1750::configure(uint8_t mode) {
         case BH1750_ONE_TIME_LOW_RES_MODE:
             // apply a valid mode change
             write8(mode);
-            _delay_ms(10);
+            delay(10);
             break;
         default:
             // Invalid measurement mode
@@ -94,4 +95,3 @@ void BH1750::write8(uint8_t d) {
 #endif
   Wire.endTransmission();
 }
-

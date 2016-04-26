@@ -21,11 +21,15 @@ Written by Christopher Laws, March, 2013.
 #else
 #include <WProgram.h>
 #endif
-#include "Wire.h"
+#include <Wire.h>
 
 #define BH1750_DEBUG 0
 
-#define BH1750_I2CADDR 0x23
+#define BH1750_I2CADDR 0x5C
+// That value should be default in case you didn't connect ADD pin, but
+// for some reason in my case secondary address (0x5C) was used by default
+//#define BH1750_I2CADDR 0x23
+
 
 // No active state
 #define BH1750_POWER_DOWN 0x00
